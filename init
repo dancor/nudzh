@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+if [ ! -e corpus ]
+then
+  mkdir corpus
+  cd corpus
+  wget http://dzl.no-ip.org/l/zw/2474.zip
+  unzip 2474.zip
+fi
+

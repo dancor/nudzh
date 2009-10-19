@@ -27,7 +27,7 @@ processSentence charList f s cs = if len < 7 then []
   where
   len = length wdsVals
   wdsVals :: [(String, Int)]
-  wdsVals = catMaybes . map (\ x -> (,) x <$> M.lookup x charList) .
+  wdsVals = catMaybes . map (\ x -> (,) x <$> M.lookup x charList) . nub .
     concatMap (map (fromUtf8 . cdData . unText) . elContent) $ onlyElems cs
   hardness :: Int
   hardness = maybe maxHard id . maxMb $ map snd wdsVals

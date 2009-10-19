@@ -1,0 +1,2 @@
+#!/bin/bash
+echo -n > sents; cat corpus/zzz | while read i; do (echo '- '"$i"; zsents $(echo "$i" | tr -d ''); echo) >> sents; done

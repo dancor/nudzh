@@ -6,5 +6,12 @@ then
   cd corpus
   wget http://dzl.no-ip.org/l/zw/2474.zip
   unzip 2474.zip
+  cd ..
+fi
+if [ ! -e corpus/z.mem ]
+then
+  cd corpus
+  wget http://dzl.no-ip.org/l/zw/z.mem
+  cd ..
 fi
 

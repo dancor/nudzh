@@ -39,7 +39,7 @@ readCharList x = M.fromList . flip zip [1..] .
 main :: IO ()
 main = do
   corpDataDir <- return "corpus/2474/Lcmc/data/character"
-  charList <- readCharList =<< (</> "l/l/z/z.mem") <$> getHomeDirectory
+  charList <- readCharList "corpus/z.mem"
   filenames <- take 1 . map (corpDataDir </>) <$>
     getDirectoryContents corpDataDir
   mapM_ (indexSentences charList) filenames

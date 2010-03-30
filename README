@@ -1,0 +1,7 @@
+todo
+- regen the list of easiest sentences excluding word itself in difficulty
+  test.
+  this way harder words will have better data (easier sentences first).
+  tho it may not matter much since there aren't that many sentences for the
+  hard words anyway.
+
